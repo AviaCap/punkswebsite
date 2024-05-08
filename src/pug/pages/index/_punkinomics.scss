@@ -1,0 +1,86 @@
+.punkinomics {
+  padding: 56px 0 172px;
+  @include mq('1024') {
+    padding: 118px 0 248px;
+
+  }
+  &__title {
+    text-align: center ;
+    margin-bottom: 32px;
+    @include mq('768') {
+      margin-bottom: 85px;
+    }
+  }
+}
+
+.punkinomics-list {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1330px;
+  margin: 0 auto;
+  @include mq('768') {
+    flex-direction: column;
+    max-height: 1300px;
+  }
+  @include mq('1024') {
+    max-height: 2000px;
+  }
+  &__title {
+    font-size: 16px;
+    margin-top: 10px;
+    @include mq('1024') {
+      font-size: 28px;
+      margin-top: 22px;
+    }
+  }
+  &__item {
+    margin-bottom: 14px;
+    width: 100%;
+    @include mq('768') {
+      width: 49%;
+      margin-bottom: 55px;
+    }
+    &:nth-child(4) {
+      @include mq('768') {
+        margin-top: 32px;
+      }
+      @include mq('1024') {
+        margin-top: 73px;
+      }
+    }
+  }
+  &-img {
+    width: 100%;
+    max-width: 332px;
+    margin: 0 auto;
+    @include mq('1024') {
+      max-width: 583px;
+    }
+  }
+}
+
+.punkinomics-team {
+  &__img {
+    width: 295px;
+    height: 143px;
+    background: var(--teamImg);
+    background-size: contain;
+    margin:0 auto;
+    @include mq('1024') {
+      width: 574px;
+      height: 278px;
+    }
+  }
+  &__text {
+    display: block;
+    font-family: $font-family-title;
+    font-size: 16px;
+    text-align: center;
+    @include mq('1024') {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+  }
+}

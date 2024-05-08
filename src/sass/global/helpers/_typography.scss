@@ -1,0 +1,30 @@
+h1 {
+  font-size: $font-size-h1;
+  font-weight: 400;
+  line-height: 1.04;
+  text-transform: uppercase;
+  font-family: $font-family-title;
+
+  @include mq('768') {
+    font-size: 36px;
+  }
+  @include mq('1280') {
+    font-size: 48px;
+    line-height: 0.96;
+  }
+}
+
+h2 {
+  @extend h1;
+  @include mq('1280') {
+    line-height: 1.04;
+  }
+}
+
+h3, h4 {
+  font-family: $font-family-title;
+}
+
+p {
+  letter-spacing: -0.66px;
+}

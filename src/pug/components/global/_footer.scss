@@ -1,0 +1,25 @@
+.footer {
+  color: var(--footerText);
+  background: var(--footerBg);
+  padding: 9px 0 0;
+  text-align: center;
+  @include mq('768') {
+    padding: 31px 0 12px;
+  }
+  &__text {
+    margin-top: 31px;
+    &_upper {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+
+    }
+  }
+  &__container {
+    @include mq('768') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}

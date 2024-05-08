@@ -1,0 +1,59 @@
+.roadmap {
+  padding: 56px 0;
+  @include mq('768') {
+    padding: 76px 0;
+  }
+  @include mq('1024') {
+    padding: 118px 0 110px;
+  }
+  &__title {
+    margin-bottom: 56px;
+  }
+}
+
+.roadmap-list {
+  @include mq('768') {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 22px;
+    margin-bottom: 32px;
+    @include mq('1024')  {
+      font-size: 35px;
+    }
+  }
+  &__subtitle {
+    font-size: 16px;
+    margin-bottom: 13px;
+    @include mq('1024')  {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    &_br {
+      border-top: 1px solid var(--fillColor);
+      margin-top: 34px;
+      padding-top: 34px;
+    }
+  }
+  &__subitem {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    margin-bottom: 48px;
+    @include mq('768') {
+      width: 48%;
+    }
+    @include mq('1024') {
+      width: 31%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

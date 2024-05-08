@@ -1,0 +1,31 @@
+$font-family-main: "Roboto Mono", monospace;
+$font-family-title: "Permanent Marker", cursive;
+//SIZE
+$font-size-main: 13px;
+$font-size-h1: 28px;
+//COLORS
+$transition: 0.2s ease-in-out;
+
+:root {
+  --bg: #fff;
+  --text: #000;
+  --fillColor: #000;
+  --teamImg: url('../img/team.png') no-repeat;
+  --heroBg: #F7F7ED;
+  --heroImg: url('../img/hero-bg.png');
+  --heroImgMob: url('../img/hero-bg-mob.png');
+  --heroText: #000;
+  --footerBg: #221B1D;
+  --footerText: #fff;
+}
+
+.dark-page {
+  --bg: #000;
+  --text: #fff;
+  --fillColor: #fff;
+  --teamImg: url('../img/team-black.png') no-repeat;
+}
+
+$breakpoints: ("320": 320px, "768": 768px, "1024": 1024px, "1280": 1280px, "1440": 1440px, "1600": 1600px);
+//width container
+$max-width: 1424px;

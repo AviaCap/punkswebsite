@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  padding: 18px 0 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background: var(--bg);
+  &__logo {
+    width: 154px;
+    height: 24px;
+    display: block;
+    .icon {
+      width: 100%;
+      height: 100%;
+      fill: var(--fillColor);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+.theme-switcher {
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+
+.burger {
+  width: 38px;
+  height: 28px;
+  background: var(--fillColor);
+
+  // i {
+
+  // }
+}
+
+
+.header-menu__wrapper {
+  display: none;
+}
