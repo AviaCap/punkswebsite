@@ -19,20 +19,24 @@
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1330px;
+  max-width: 1200px;
   margin: 0 auto;
   @include mq('768') {
     flex-direction: column;
-    max-height: 1300px;
+    flex-wrap: wrap;
+    max-height: 1500px;
   }
   @include mq('1024') {
-    max-height: 2000px;
+    max-height: 1800px;
+  }
+  @include mq('1280') {
+    max-height: 2300px;
   }
   &__title {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 0;
     @include mq('1024') {
       font-size: 28px;
-      margin-top: 22px;
     }
   }
   &__item {
@@ -55,13 +59,29 @@
     width: 100%;
     max-width: 332px;
     margin: 0 auto;
+    position: relative;
     @include mq('1024') {
-      max-width: 583px;
+      max-width: 450px;
+    }
+    @include mq('1280') {
+      max-width: 652px;
+    }
+    &__food{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
     }
   }
 }
 
 .punkinomics-team {
+  margin-top: 69px;
+  @include mq('768') {
+    margin-top: 44px;
+
+  }
   &__img {
     width: 295px;
     height: 143px;

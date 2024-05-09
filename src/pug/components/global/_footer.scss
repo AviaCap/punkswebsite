@@ -1,7 +1,7 @@
 .footer {
   color: var(--footerText);
   background: var(--footerBg);
-  padding: 9px 0 0;
+  padding: 9px 0;
   text-align: center;
   @include mq('768') {
     padding: 31px 0 12px;
