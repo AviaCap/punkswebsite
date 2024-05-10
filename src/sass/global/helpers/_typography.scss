@@ -4,6 +4,7 @@ h1 {
   line-height: 1.04;
   text-transform: uppercase;
   font-family: $font-family-title;
+  text-align: center;
 
   @include mq('768') {
     font-size: 36px;

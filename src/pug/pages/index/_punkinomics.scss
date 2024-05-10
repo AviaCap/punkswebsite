@@ -1,5 +1,6 @@
 .punkinomics {
   padding: 56px 0 172px;
+
   @include mq('1024') {
     padding: 118px 0 248px;
 
@@ -9,6 +10,24 @@
     margin-bottom: 32px;
     @include mq('768') {
       margin-bottom: 85px;
+    }
+  }
+  .container {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 246px;
+      background: var(--lips);
+      top: -241px;
+      right: 0;
+      background-size: contain;
+      filter: contrast(3);
+      display: none;
+      @include mq('1024') {
+        display: block;
+      }
     }
   }
 }

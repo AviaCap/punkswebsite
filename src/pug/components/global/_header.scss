@@ -31,11 +31,21 @@
       height: 100%;
       fill: var(--fillColor);
     }
+
+    @include mq('768') {
+      width: 194px;
+      height: 30px;
+    }
+    @include mq('1280') {
+      width: 282px;
+      height: 44px;
+    }
   }
-  &__container {
+  &__container.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1600px;
   }
 }
 

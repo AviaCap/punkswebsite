@@ -4,4 +4,8 @@
   max-width: $max-width;
   padding: 0 20px;
   margin: auto;
+  @include mq('1024') {
+    max-width: 1464px;
+    padding: 0 40px;
+  }
 }
