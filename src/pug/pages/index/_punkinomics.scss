@@ -1,13 +1,14 @@
 .punkinomics {
   padding: 56px 0 172px;
-
   @include mq('1024') {
+    padding: 118px 0;
+  }
+  @include mq('1600') {
     padding: 118px 0 248px;
-
   }
   &__title {
     text-align: center ;
-    margin-bottom: 32px;
+    margin-bottom: 29px;
     @include mq('768') {
       margin-bottom: 85px;
     }
@@ -19,15 +20,18 @@
       position: absolute;
       width: 320px;
       height: 246px;
-      background: var(--lips);
+      background: var(--lips) no-repeat;
       top: -241px;
       right: 0;
       background-size: contain;
-      filter: contrast(3);
       display: none;
+      filter: contrast(3);
       @include mq('1024') {
         display: block;
       }
+    }
+    &.invert:before {
+      mix-blend-mode: color-dodge;
     }
   }
 }
@@ -37,29 +41,33 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1330px;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   @include mq('768') {
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 1500px;
+    max-height: 1600px;
   }
   @include mq('1024') {
-    max-height: 1800px;
+    max-height: 1600px;
   }
   @include mq('1280') {
-    max-height: 2300px;
+    max-height: 1800px;
+    max-width: 1000px;
+  }
+  @include mq('1600') {
+    max-width: 1200px;
   }
   &__title {
-    font-size: 16px;
-    margin-top: 0;
+    font-size: 18px;
+    margin-top: 0px;
+    text-transform: uppercase;
     @include mq('1024') {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
   &__item {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     width: 100%;
     @include mq('768') {
       width: 49%;
@@ -67,30 +75,35 @@
     }
     &:nth-child(4) {
       @include mq('768') {
-        margin-top: 32px;
-      }
-      @include mq('1024') {
         margin-top: 73px;
       }
     }
   }
   &-img {
     width: 100%;
-    max-width: 332px;
+    max-width: 329px;
     margin: 0 auto;
     position: relative;
     @include mq('1024') {
-      max-width: 450px;
+      max-width: 360px;
     }
     @include mq('1280') {
-      max-width: 652px;
+      max-width: 450px;
     }
     &__food{
-      width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
       object-fit: contain;
+      width: 300px;
+      position: relative;
+      left: -14px;
+      max-width: 320px;
+      @include mq('768') {
+        max-width: 100%;
+        width: 100%;
+        left: 0;
+      }
     }
   }
 }
@@ -107,7 +120,11 @@
     background: var(--teamImg);
     background-size: contain;
     margin:0 auto;
-    @include mq('1024') {
+    @include mq('768') {
+      width: 340px;
+      height: 171px;
+    }
+    @include mq('1600') {
       width: 574px;
       height: 278px;
     }

@@ -9,6 +9,9 @@
   &__title {
     margin-bottom: 56px;
   }
+  .container {
+    max-width: 1220px;
+  }
 }
 
 .roadmap-list {
@@ -18,15 +21,19 @@
     justify-content: space-between;
   }
   &__title {
-    font-size: 22px;
-    margin-bottom: 32px;
+    font-size: 24px;
+    margin-bottom: 26px;
+    text-transform: uppercase;
     @include mq('1024')  {
       font-size: 35px;
     }
   }
   &__subtitle {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 13px;
+    max-width: 236px;
+    text-transform: uppercase;
+    line-height: 1.04;
     @include mq('1024')  {
       font-size: 20px;
     }
@@ -45,11 +52,8 @@
     }
   }
   &__item {
-    margin-bottom: 48px;
+    margin-bottom: 45px;
     @include mq('768') {
-      width: 48%;
-    }
-    @include mq('1024') {
       width: 31%;
     }
     &:last-child {

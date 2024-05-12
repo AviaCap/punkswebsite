@@ -10,8 +10,10 @@ $transition: 0.2s ease-in-out;
   --bg: #fff;
   --text: #000;
   --fillColor: #000;
+  --headerStartColor: #000;
+  --headerScrollColor: #000;
   --teamImg: url('../img/team.png') no-repeat;
-  --lips: url('../img/lips-light.gif') no-repeat;
+  --lips: url('../img/lips-light.gif');
   --heroBg: #F7F7ED;
   --heroImg: url('../img/hero-bg.png');
   --heroImgMob: url('../img/hero-bg-mob.png');
@@ -21,11 +23,12 @@ $transition: 0.2s ease-in-out;
 }
 
 .dark-page {
-  --bg: #000;
+  --bg: #231F20;
   --text: #fff;
   --fillColor: #fff;
   --teamImg: url('../img/team-black.png') no-repeat;
-  --lips: url('../img/lips-dark.gif') no-repeat;
+  --lips: url('../img/lips-dark.gif');
+  --headerScrollColor: #fff;
 }
 
 $breakpoints: ("320": 320px, "768": 768px, "1024": 1024px, "1280": 1280px, "1440": 1440px, "1600": 1600px);

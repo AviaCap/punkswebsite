@@ -9,11 +9,15 @@ const checkStorage = () => {
 const lightTheme = (btnImg) => {
   btnImg.src = "./img/dark.png";
   btnImg.setAttribute("alt", "moon");
+  btnImg.classList.remove('invert');
+  document.querySelector(".punkinomics .container").classList.remove('invert');
   document.body.classList.remove('dark-page');
 }
 const darkTheme = (btnImg) => {
   btnImg.src = "./img/light.png";
   btnImg.setAttribute("alt", "sun");
+  btnImg.classList.add('invert');
+  document.querySelector(".punkinomics .container").classList.add('invert');
   document.body.classList.add('dark-page');
 }
 

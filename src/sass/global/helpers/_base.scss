@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: $font-family-main;
-  font-size: $font-size-main;
+  font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
   color: var(--text);
@@ -30,18 +30,7 @@ body {
   overflow-anchor: auto;
   scroll-behavior: smooth;
   text-rendering: auto;
-  // transition: $transition;
-  // transition-property: color, background;
-  @include mq('768') {
-    font-size: 16px;
-  }
-
-  /*&::-webkit-scrollbar {
-    background-color: $gray-dark;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $red;
-  }*/
+  -webkit-overflow-scrolling:touch;
 }
 
 img,

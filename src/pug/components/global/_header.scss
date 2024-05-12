@@ -1,13 +1,13 @@
 .header {
   width: 100%;
-  padding: 18px 0 14px;
-  position: sticky;
+  position: fixed;
+  padding: 18px 0;
   top: 0;
   left: 0;
   right: 0;
   z-index: 500;
-  transition: transform 140ms ease-in-out 140ms;
-  background: var(--bg);
+  transition: background 300ms ease-in-out 0s, padding 140ms ease-in-out, transform 140ms ease-in-out 140ms;
+  background: var(--heroBg);
   @include mq('768') {
     padding: 10px 0;
   }
@@ -20,6 +20,33 @@
       transform: translateY(-110px);
     }
   }
+  &.bg {
+    background: var(--bg);
+    padding: 18px 0 14px;
+    .icon {
+      width: 100%;
+      height: 100%;
+      fill: var(--headerScrollColor);
+    }
+    .invert {
+      @include mq('768') {
+        filter: invert(0);
+      }
+    }
+    .header-menu__link {
+      @include mq('768') {
+        color: var(--headerScrollColor);
+      }
+    }
+    .burger i {
+      background: var(--headerScrollColor);
+    }
+  }
+  &.open {
+    .header__logo .icon{
+      fill: var(--fillColor);
+    }
+  }
   &__logo {
     width: 154px;
     height: 24px;
@@ -29,14 +56,17 @@
     .icon {
       width: 100%;
       height: 100%;
-      fill: var(--fillColor);
+      fill: var(--headerStartColor);
     }
-
     @include mq('768') {
       width: 194px;
       height: 30px;
     }
     @include mq('1280') {
+      width: 216px;
+      height: 34px;
+    }
+    @include mq('1600') {
       width: 282px;
       height: 44px;
     }
@@ -76,6 +106,11 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+    &.invert {
+      @include mq('768') {
+        filter: invert(1);
+      }
+    }
   }
 }
 
@@ -90,7 +125,7 @@
     display: none;
   }
   i {
-    background: var(--fillColor);
+    background: var(--headerStartColor);
     width: 100%;
     height: 1px;
     position: absolute;
@@ -109,6 +144,7 @@
   }
   &.close {
     i {
+      background: var(--fillColor);
       &:first-child {
         transform: scale(0);
       }
@@ -158,6 +194,7 @@
       flex-direction: row;
       visibility: visible;
       padding-top: 0;
+      background: transparent;
     }
     &.open {
       visibility: visible;
@@ -174,12 +211,9 @@
     line-height: 1.4;
     letter-spacing: -1.2px;
     @include mq('768') {
-      font-size: 20px;
-      letter-spacing: -0.7px;
-    }
-    @include mq('1280') {
       font-size: 24px;
       letter-spacing: -1.2px;
+      color: var(--headerStartColor);
     }
   }
   &__item {
