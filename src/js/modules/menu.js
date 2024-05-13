@@ -22,10 +22,14 @@ const toggleBurger = () => {
 export const scrollPage = () => {
   const section = document.querySelector('.first-sc');
   let position = pageYOffset;
+  let heightW = window.innerHeight;
   section.style.paddingTop = `${header.offsetHeight}px`;
   if(pageYOffset >=1) {
     header.classList.add('bg');
-  }
+  };
+  if(pageYOffset>heightW) {
+    header.classList.add('invert');
+  };
   window.addEventListener('scroll', () => {
     let newPosition = pageYOffset;
     if(newPosition > 100) {
@@ -43,6 +47,11 @@ export const scrollPage = () => {
     } else {
       header.classList.remove('bg');
       section.style.paddingTop = `${header.offsetHeight}px`;
+    }
+    if(newPosition>heightW) {
+      header.classList.add('invert');
+    } else {
+      header.classList.remove('invert');
     }
     position = newPosition;
   });

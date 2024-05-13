@@ -12,6 +12,7 @@ $transition: 0.2s ease-in-out;
   --fillColor: #000;
   --headerStartColor: #000;
   --headerScrollColor: #000;
+  --header100vhColor: #000;
   --teamImg: url('../img/team.png') no-repeat;
   --lips: url('../img/lips-light.gif');
   --heroBg: #F7F7ED;
@@ -28,7 +29,8 @@ $transition: 0.2s ease-in-out;
   --fillColor: #fff;
   --teamImg: url('../img/team-black.png') no-repeat;
   --lips: url('../img/lips-dark.gif');
-  --headerScrollColor: #fff;
+  --headerScrollColor: #000;
+  --header100vhColor: #fff;
 }
 
 $breakpoints: ("320": 320px, "768": 768px, "1024": 1024px, "1280": 1280px, "1440": 1440px, "1600": 1600px);
