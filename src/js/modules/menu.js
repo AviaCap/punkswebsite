@@ -28,12 +28,16 @@ export const scrollPage = () => {
   }
   window.addEventListener('scroll', () => {
     let newPosition = pageYOffset;
-    if(newPosition > position) {
-      header.classList.add('scroll');
+    if(newPosition > 100) {
+      if(newPosition > position) {
+        header.classList.add('scroll');
+      } else {
+        header.classList.remove('scroll');
+      }
     } else {
       header.classList.remove('scroll');
     }
-    if(pageYOffset >=1) {
+    if(pageYOffset >=2) {
       header.classList.add('bg');
       section.style.paddingTop = `${header.offsetHeight}px`;
     } else {
