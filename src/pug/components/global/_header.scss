@@ -204,6 +204,9 @@
     flex-direction: column;
     justify-content: center;
     z-index: 0;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     @include mq('768') {
       opacity: 1;
       position: relative;
@@ -211,6 +214,9 @@
       visibility: visible;
       padding-top: 0;
       background: transparent;
+      height: 100%;
+      width: auto;
+      justify-content: flex-end;
     }
     &.open {
       visibility: visible;
