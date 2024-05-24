@@ -23,14 +23,14 @@
       justify-content: space-around;
     }
     &_max.container {
-      max-width: 100%;
-      padding: 0 7px;
+      max-width: calc(100% - 14px);
+      overflow: hidden;
       @include mq('768') {
         padding: 0 13px;
       }
       p {
         white-space: nowrap;
-        overflow: hidden;
+        animation: 20s linear 0s infinite none slider;
       }
     }
   }
@@ -38,7 +38,6 @@
     @include mq('768') {
       margin-bottom: 26px;
     }
-
   }
 }
 
@@ -66,5 +65,14 @@
     height: 100%;
     font-size: 0;
     cursor: pointer;
+  }
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-2459px);
   }
 }

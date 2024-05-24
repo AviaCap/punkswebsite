@@ -6,6 +6,17 @@
   @include mq('1600') {
     padding: 118px 0 248px;
   }
+  &__subtitle {
+    text-align: center;
+    font-family: $font-family-title;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    @include mq('1024') {
+      font-size: 20px;
+    }
+  }
   &__title {
     text-align: center ;
     margin-bottom: 29px;
