@@ -18,8 +18,12 @@
     }
   }
   &__title {
-    text-align: center ;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__text {
     margin-bottom: 29px;
+    text-align: center;
     @include mq('768') {
       margin-bottom: 85px;
     }
