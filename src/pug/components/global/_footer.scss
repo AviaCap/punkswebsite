@@ -29,8 +29,9 @@
         padding: 0 13px;
       }
       p {
+        width: fit-content;
         white-space: nowrap;
-        animation: 20s linear 0s infinite none slider;
+        animation: 110s linear 0s infinite slider;
       }
     }
   }
@@ -73,6 +74,6 @@
     transform: translateX(100px);
   }
   100% {
-    transform: translateX(-2459px);
+    transform: translateX(-100%);
   }
 }
